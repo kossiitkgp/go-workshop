@@ -30,6 +30,7 @@ func SearchEngine(query string) (results []Result) {
 	go func() { c <- Image(query) }()
 	go func() { c <- Video(query) }()
 
+	// Can we use for result := range c here instead?
 	for i := 0; i < 3; i++ {
 		result := <-c
 		results = append(results, result)
