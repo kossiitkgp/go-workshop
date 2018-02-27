@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KOSS JS Workshop</title>
+	<link rel="stylesheet" href="style.css" type="text/css" />
+  <meta charset="utf-8"/>
+  <style>
+    .box {
+      margin: 30px;
+      height: 50px;
+      width: 50px;
+      background-color: #3498DC;
+    }
+    .box.horizTranslate {
+      transition: 3s;
+      margin-left: 50% !important;
+    }
+  </style>
+</head>
+<body>
+	<div id="header">
+		<div class="logo">
+			<a href="https://kossiitkgp.in/"><img height=70 src="https://kossiitkgp.in/assets/images/kosslogo.png"></a>
+      <h2>Koss JS Workshop</h2>
+		</div>
+	</div>
+  <div class="content">
+    <p>Hey There!</p>
+    <div class='box'></div>
+    <button class='toggleButton' value='play'>Play</button>
+  </div>
+  <script>
+    var boxOne = document.querySelector('.box');
+    document.querySelector('.toggleButton').onclick = function() {
+      if(this.innerHTML === 'Play')
+      {
+        this.innerHTML = 'Pause';
+        boxOne.classList.add('horizTranslate');
+      }
+    }
+  </script>
+</body>
+</html>

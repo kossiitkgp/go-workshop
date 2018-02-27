@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mouse Hover click | KOSS JS Tutorial</title><meta charset="UTF-8">
+</head>
+<body>
+
+<div id="title" align="center"><h2>Hi! This is my web page | Mouse Hover example</h3></div>
+<br><br><br>
+<div id="para">Nothing here!</div>
+<br><br><br>
+
+<div><b><i>Now I want to alter some text when the mouse is hovered on the title</i></b></div>
+</body>
+<script type="text/javascript">
+
+	var title = document.getElementById('title');   // Element selector  with the id = "title"
+
+	title.addEventListener('mouseover', function (){    // event listeners for when the mouse enters the element
+		var para = document.getElementById('para')
+		console.log(para.innerHTML);
+		para.innerHTML = "Text altered when mouse was hovered on the title";
+	});
+	title.addEventListener('mouseleave', function (){   // event listeners for when the mouse leaves the element
+		var para = document.getElementById('para')
+		console.log(para.innerHTML);
+		para.innerHTML = "Nothing here!";
+	});
+</script>
+
+
+
+</html>

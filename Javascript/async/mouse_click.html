@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mouse Click event | KOSS JS Tutorial</title><meta charset="UTF-8">
+</head>
+<body>
+
+<div id="title" align="center"><h2>Hi! This is my web page | Mouse Click example</h3></div>
+<br><br><br>
+<div id="para">Nothing here!</div>
+<br><br><br>
+<div id="toadd">
+	
+</div>
+<br><br><br>
+<div><b><i>Let's say, I want to add some text when the mouse is clicked on the title</i></b></div>
+</body>
+<script type="text/javascript">
+	var title = document.getElementById('title');   // Element selector  with the id = "title"
+
+	title.addEventListener('click', function (){    // event listeners for when the mouse clicks the element
+		var toadd = document.getElementById('toadd');
+
+		if (toadd.innerHTML == false) {
+			toadd.innerHTML = "Text added when mouse was hovered on the title";	
+		}
+		else{
+			toadd.innerHTML = "";		
+		}
+		
+	});
+	
+</script>
+
+
+
+</html>

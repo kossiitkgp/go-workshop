@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KOSS JS Workshop</title>
+	<link rel="stylesheet" href="style.css" type="text/css" />
+  <meta charset="utf-8"/>
+</head>
+<body>
+	<div id="header">
+		<div class="logo">
+			<a href="https://kossiitkgp.in/"><img height=70 src="https://kossiitkgp.in/assets/images/kosslogo.png"></a>
+      <h2>Koss JS Workshop</h2>
+		</div>
+	</div>
+  <div class="content">
+    <p>Hey There!</p>
+    <p>Click to increase the value of variable</p>
+    <button onclick="geta()">Increase value</button>
+    <p>Value of a is : </p><span id="variableclass"></span>
+  </div>
+</body>
+<script>
+  let a = 3;
+  var b = document.getElementById('variableclass');
+  console.log(b);
+  b.innerHTML = a;
+  function geta() {
+    a = a+1;
+    b.innerHTML = a;
+  }
+  if(true) {
+    var c = 4;
+  }
+  console.log(c);
+
+</script>
+</html>

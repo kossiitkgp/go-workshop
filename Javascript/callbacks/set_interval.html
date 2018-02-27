@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>setInterval() example | KOSS JS Tutorial</title><meta charset="UTF-8">
+</head>
+<body>
+
+<div id="title" align="center"><h2>Hi! This is my web page | setInterval() example</h3></div>
+<br><br><br>
+<div id="para">Nothing here!</div>
+<br><br><br>
+<div id="toadd">
+	
+</div>
+<br><br><br>
+<div><b><i>Let's say, I want to alterately add and delete some text in an interval of 1 second after the page is loaded</i></b></div>
+</body>
+<script type="text/javascript">
+	var title = document.getElementById('title');   // Element selector  with the id = "title"
+
+	setInterval(function (){    // event listeners for when the mouse clicks the element
+		var toadd = document.getElementById('toadd');
+
+		if (toadd.innerHTML == false) {
+			toadd.innerHTML = "Text added when mouse was hovered on the title";	
+		}
+		else{
+			toadd.innerHTML = "";		
+		}
+		
+	},1000);
+	
+</script>
+
+
+
+</html>
