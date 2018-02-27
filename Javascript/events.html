@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KOSS JS Workshop</title>
+	<link rel="stylesheet" href="style.css" type="text/css" />
+  <meta charset="utf-8"/>
+</head>
+<body>
+	<div id="header">
+		<div class="logo">
+			<a href="https://kossiitkgp.in/"><img height=70 src="https://kossiitkgp.in/assets/images/kosslogo.png"></a>
+      <h2>Koss JS Workshop</h2>
+		</div>
+	</div>
+  <div class="content">
+  </div>
+</body>
+<script>
+    //1. let evt = new Event('explode');
+    //2. let evt = new CustomEvent('explode', {detail:{speed:20, volume:40}});
+
+    // let born = new Event('born');
+    // let died = new CustomEvent('died', {detail:{time:Date.now()}});
+    //
+    document.addEventListener('DOMContentLoaded', function (){
+        let m = document.querySelector('.content');
+        addParagraph(m, 'This is a paragraph.');
+        addParagraph(m, 'Welcome to KOSS JS Workshop');
+        m.addEventListener('click', function(ev){
+            removeParagraph(m, m.firstElementChild);
+        })
+    });
+
+    function addParagraph(parent, txt){
+        let p = document.createElement('p');
+        p.textContent = txt;
+        //set up and dispatch events
+        // p.addEventListener('born', wasBorn);
+        // p.addEventListener('died', hasDied);
+        // p.dispatchEvent(born)
+
+        //add to screen
+        parent.appendChild(p);
+    }
+    function removeParagraph(parent, p){
+        // dispatch event
+        // p.dispatchEvent(died);
+
+        //remove element from screen
+        parent.removeChild(p);
+    }
+    // function wasBorn(ev){
+    //     console.log(ev.type, ev.target);
+    // }
+    // function hasDied(ev){
+    //     console.log(ev.type, ev.target, ev.detail.time);
+    //     //remove the listeners
+    //     ev.target.removeEventListener('born', wasBorn);
+    //     ev.target.removeEventListener('died', hasDied);
+    // }
+</script>
+</html>

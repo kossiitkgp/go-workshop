@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>callback example | KOSS JS Tutorial</title><meta charset="UTF-8">
+</head>
+<body>
+
+<div id="title" align="center"><h2>Hi! This is my web page | callback example</h3></div>
+<br><br><br>
+<div id="para">Nothing here!</div>
+<br><br><br>
+<div id="toadd">
+	
+</div>
+<br><br><br>
+<div><b><i>Use of callback</i></b></div>
+</body>
+<script type="text/javascript">
+	var index = 0;
+
+	function set_index(){
+		index = 10;
+	}
+
+	function normalize(x) {  // divides the passed values by the index
+		return x/index;
+	}
+ 	
+	setTimeout(set_index,2000);  // imagine some async function that takes some time to complete
+								// although, the control has moved to next statement and executed it.
+								// Which gives wrong results. This is something
+	console.log(normalize(523));
+
+
+</script>
+
+
+
+</html>

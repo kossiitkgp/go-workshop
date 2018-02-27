@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      /**
+       * Delay for a number of milliseconds
+       */
+      function sleep(delay) {
+        var start = new Date().getTime();
+        while (new Date().getTime() < start + delay);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Eureka!</h1>
+      <script type="text/javascript">
+        alert("Wait for 5 seconds.");
+        sleep(5000)
+        alert("5 seconds passed.");
+      </script>
+  </body>
+</html>
